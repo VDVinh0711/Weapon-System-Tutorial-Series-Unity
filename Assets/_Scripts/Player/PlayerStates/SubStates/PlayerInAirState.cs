@@ -74,6 +74,7 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        Debug.Log("in air state");
     }
 
     public override void Exit()

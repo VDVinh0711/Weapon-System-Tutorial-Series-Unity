@@ -17,14 +17,23 @@ public class PlayerJumpState : PlayerAbilityState {
 		isAbilityDone = true;
 		amountOfJumpsLeft--;
 		player.InAirState.SetIsJumping();
+		Debug.Log("Enter JumpState");
 	}
 
+	
 	public bool CanJump() {
 		if (amountOfJumpsLeft > 0) {
 			return true;
 		} else {
 			return false;
 		}
+	}
+
+	public override void Exit()
+	{
+		base.Exit();
+		Debug.Log("exit jump state");
+		Debug.Log(isAbilityDone);
 	}
 
 	public void ResetAmountOfJumpsLeft() => amountOfJumpsLeft = playerData.amountOfJumps;

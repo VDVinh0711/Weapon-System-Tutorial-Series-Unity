@@ -12,6 +12,7 @@ public class PlayerMoveState : PlayerGroundedState {
 
 	public override void Enter() {
 		base.Enter();
+		Debug.Log("Enter Move State");
 	}
 
 	public override void Exit() {
